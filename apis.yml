@@ -1,0 +1,47 @@
+aid: swept
+url: https://raw.githubusercontent.com/api-evangelist/swept/refs/heads/main/apis.yml
+name: Swept
+kind: company
+description: Swept (sweptworks.com) is workforce management software for
+  commercial cleaning and janitorial businesses - scheduling, GPS-verified time
+  tracking and payroll reporting, mobile crew messaging, quality inspections,
+  supply requests, client portals, and one-time work order management. As of
+  this catalog entry, Swept does NOT publish a documented, self-serve public or
+  partner developer API. There is no developer portal, API reference, API key
+  or OAuth signup, published OpenAPI/Swagger specification, or webhook
+  documentation on sweptworks.com or in the Swept Support Center knowledge
+  base. The only documented outbound data path is a one-way, manually-activated
+  QuickBooks Online payroll sync set up per account by a Swept Customer Success
+  Manager - not a self-serve developer integration. Swept's public GitHub
+  organization contains only take-home coding-challenge repositories used for
+  hiring, not a first-party API client, SDK, or spec. This entry is therefore
+  an honest stub documenting the provider and its access model; no API
+  definitions are asserted because none are publicly documented.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Janitorial
+- Commercial Cleaning
+- Workforce Management
+- Scheduling
+- Time Tracking
+- Payroll
+- Inspections
+- Field Service
+- No Public API
+created: '2026-07-04'
+modified: '2026-07-04'
+specificationVersion: '0.19'
+common:
+- type: Website
+  url: https://sweptworks.com
+- type: LinkedIn
+  url: https://www.linkedin.com/company/swept
+- type: GitHubOrganization
+  url: https://github.com/sweptworks
+- type: Documentation
+  url: https://knowledge.sweptworks.com/knowledge/resources
+- type: Plans
+  url: plans/swept-plans-pricing.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

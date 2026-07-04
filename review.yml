@@ -1,0 +1,94 @@
+aid: swept
+name: Swept
+review:
+  question: Does Swept expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-04'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Swept does not publish any documented
+    public developer API - REST or otherwise - so there is no server-push
+    transport (WebSocket or SSE) on a Swept API to model. Swept's mobile and
+    web apps deliver real-time-feeling crew messaging, geofenced alerts, and
+    no-show/late notifications to end users, but that behavior runs over
+    Swept's own private, undocumented application backend and is not offered
+    as a developer-consumable API. There is no public interface (WebSocket,
+    SSE, or REST) to describe with AsyncAPI.
+findings:
+  summary: |
+    Swept does not publish a documented public WebSocket API - and, more
+    broadly, does not publish a documented public or self-serve partner
+    developer API of any kind. Swept is a workforce management platform for
+    commercial cleaning and janitorial businesses (scheduling, GPS time
+    tracking, payroll reporting, crew messaging, inspections, supplies, client
+    portal). As of the review date there is no developer portal, no API
+    reference, no API key or OAuth client signup, no published OpenAPI/Swagger
+    specification, and no webhook documentation on sweptworks.com or in the
+    Swept Support Center knowledge base. The only documented outbound data path
+    is a one-way QuickBooks Online payroll sync, manually activated per
+    account by a Swept Customer Success Manager - not a self-serve developer
+    integration. No WebSocket (ws:// or wss://) endpoint is documented anywhere.
+  openSource: |
+    Swept is a proprietary, closed-source commercial SaaS. The company
+    maintains a GitHub organization (github.com/sweptworks), but its public
+    repositories are take-home coding-challenge templates used for engineering
+    hiring (react-flask-takehome, poker-takehome, python-react-takehome) plus
+    two unrelated forks (nameko-examples, alpine-android) - there is no
+    first-party Swept API client, SDK, or OpenAPI specification published
+    there.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API is documented. Swept's apps use a private, undocumented backend.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere in Swept's public materials as of the review date.
+    - protocol: Webhook
+      scheme: https
+      documented: false
+      note: No outbound webhook / event subscription API is documented for third-party developers.
+  accessModel: |
+    Access to Swept is via the web app and the iOS/Android mobile apps for
+    admins, cleaners/crew, and clients (via the client portal on higher
+    tiers). Payroll data can be exported as CSV/PDF for use with any payroll
+    system, and a one-way sync of approved payroll entries into QuickBooks
+    Online can be activated by a Customer Success Manager on request. There is
+    no open, documented, developer-accessible API for building third-party
+    integrations.
+  endpointsModeled: none
+  endpointsConfirmedRest: []
+sources:
+  - url: https://sweptworks.com/
+    type: Website
+    note: Product overview - janitorial workforce management platform; no developer/API link in navigation.
+  - url: https://sweptworks.com/app-store?hsLang=en
+    type: Website
+    note: "\"App Store\" page lists product features and mobile apps, not third-party integrations or an API marketplace."
+  - url: https://knowledge.sweptworks.com/knowledge/resources
+    type: Documentation
+    note: Support Center resource index. No mention of a public API, API keys, webhooks, or developer docs.
+  - url: https://knowledge.sweptworks.com/knowledge/how-do-i-sync-my-account-with-quickbooks
+    type: Documentation
+    note: Documents a manually-activated, one-way QuickBooks Online payroll sync set up by a Customer Success Manager - not a self-serve API.
+  - url: https://sweptworks.com/compare-plans
+    type: Pricing
+    note: Three location-based tiers (Launch/Optimize/Scale); no published API plan or developer tier.
+  - url: https://github.com/sweptworks
+    type: SourceCode
+    note: Swept GitHub org - only take-home coding-challenge repos and unrelated forks; no first-party API client, SDK, or OpenAPI spec.
+  - url: https://www.linkedin.com/company/swept
+    type: LinkedIn
+    note: Company page confirms founding (2014, Halifax, Nova Scotia) and product description.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket protocol surface exists, and Swept exposes no documented
+    public developer API of any kind. The apis.yml was written as an honest
+    stub that documents the provider, its access model, and its lack of a
+    public API, without asserting any API definitions. No AsyncAPI document
+    was created because there is no documented public transport (WebSocket,
+    SSE, or REST) on a Swept API to model.

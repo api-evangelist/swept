@@ -1,0 +1,104 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Swept
+providerId: swept
+created: '2026-07-04'
+modified: '2026-07-04'
+reconciled: false
+tags:
+- Janitorial
+- Commercial Cleaning
+- Workforce Management
+- Plans
+description: >-
+  Swept publishes three named product tiers - Launch, Optimize, and Scale -
+  priced by number of managed locations rather than per employee, starting at
+  a 1-15 location band. Each tier is cumulative (Optimize includes Launch,
+  Scale includes Optimize). Annual billing saves up to 20% versus monthly.
+  These are software subscription tiers, not API/developer pricing - Swept has
+  no published developer API and therefore no API usage plan, rate-limit tier,
+  or metered API pricing to model.
+notes: >-
+  Prices below are the publicly listed monthly starting prices for the
+  smallest location band (1-15 locations) as shown on sweptworks.com at review
+  time. Higher location bands and enterprise pricing are quote-based. Verify
+  current bands and rates on the Swept pricing page during reconciliation.
+sources:
+- https://sweptworks.com/compare-plans
+- https://sweptworks.com/pricing
+plans:
+- id: swept-launch
+  name: Launch
+  type: paid
+  description: >-
+    Entry tier covering core scheduling, GPS-verified time tracking, payroll
+    reporting with export, and no-show/late alerts, with in-app onboarding and
+    live chat support (Mon-Fri, 9am-5pm EST).
+  entries:
+  - label: Monthly Subscription (1-15 locations)
+    name: launch_monthly
+    type: flat
+    metric: locations
+    limit: 15
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: starting at $30/month
+    userMultiplied: false
+  elements:
+  - name: Scheduling
+  - name: GPS Time Tracking
+  - name: Payroll Reporting (Export)
+  - name: No-Show and Late Alerts
+  - name: Live Chat Support
+- id: swept-optimize
+  name: Optimize
+  type: paid
+  description: >-
+    Adds mandatory break compliance, location-based messaging and geofences,
+    and inspections with photo/note capture on top of Launch.
+  entries:
+  - label: Monthly Subscription (1-15 locations)
+    name: optimize_monthly
+    type: flat
+    metric: locations
+    limit: 15
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: starting at $150/month
+    userMultiplied: false
+  elements:
+  - name: All Launch Features
+  - name: Mandatory Break Compliance
+  - name: Location-Based Messaging and Geofences
+  - name: Inspections (Photo and Notes)
+- id: swept-scale
+  name: Scale
+  type: paid
+  description: >-
+    Adds travel time tracking, profitability reporting, supply request
+    management and fulfillment, a client portal with direct client messaging,
+    and one-time work order scheduling on top of Optimize.
+  entries:
+  - label: Monthly Subscription (1-15 locations)
+    name: scale_monthly
+    type: flat
+    metric: locations
+    limit: 15
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: starting at $225/month
+    userMultiplied: false
+  elements:
+  - name: All Optimize Features
+  - name: Travel Time Tracking
+  - name: Profitability Reporting
+  - name: Supply Request Management
+  - name: Client Portal and Messaging
+  - name: One-Time Work Order Scheduling
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

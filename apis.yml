@@ -17,6 +17,17 @@ description: Swept (sweptworks.com) is workforce management software for
   hiring, not a first-party API client, SDK, or spec. This entry is therefore
   an honest stub documenting the provider and its access model; no API
   definitions are asserted because none are publicly documented.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: unknown

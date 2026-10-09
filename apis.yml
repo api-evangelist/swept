@@ -34,6 +34,9 @@ accessModel:
   trial: false
   try_now: false
   public: false
+  gated: private
+  gated_source:
+  - tag:No Public API
   label: Paid
   confidence: medium
   source:
@@ -50,7 +53,6 @@ tags:
 - Payroll
 - Inspection
 - Field Service
-- No Public API
 tags_raw:
 - Janitorial
 - Commercial Cleaning
@@ -60,7 +62,6 @@ tags_raw:
 - Payroll
 - Inspections
 - Field Service
-- No Public API
 created: '2026-07-04'
 modified: '2026-07-04'
 specificationVersion: '0.23'
@@ -82,3 +83,5 @@ common:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-tags-removed:
+- No Public API

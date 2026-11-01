@@ -1,4 +1,4 @@
-# Swept (swept)
+# Swept
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,67 +64,88 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Swept ([sweptworks.com](https://sweptworks.com)) is workforce management software for commercial cleaning and janitorial businesses. It combines scheduling, GPS-verified time tracking and payroll reporting, mobile crew messaging, quality inspections, supply requests, client portals, and one-time work order management, founded in 2014 in Halifax, Nova Scotia.
+Swept (sweptworks.com) is workforce management software for commercial cleaning and janitorial businesses - scheduling, GPS-verified time tracking and payroll reporting, mobile crew messaging, quality inspections, supply requests, client portals, and one-time work order management. As of this catalog entry, Swept does NOT publish a documented, self-serve public or partner developer API. There is no developer portal, API reference, API key or OAuth signup, published OpenAPI/Swagger specification, or webhook documentation on sweptworks.com or in the Swept Support Center knowledge base. The only documented outbound data path is a one-way, manually-activated QuickBooks Online payroll sync set up per account by a Swept Customer Success Manager - not a self-serve developer integration. Swept's public GitHub organization contains only take-home coding-challenge repositories used for hiring, not a first-party API client, SDK, or spec. This entry is therefore an honest stub documenting the provider and its access model; no API definitions are asserted because none are publicly documented.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/swept/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/swept/refs/heads/main/apis.yml)
+**Areas:** Janitorial · Commercial Cleaning · Workforce Management · Scheduling · Time Tracking · Payroll · Inspection · Field Service
 
-## API Access Model — No Public Developer API
+## Swept on APIs.io
 
-> **Honest status:** As of this catalog entry (2026-07-04), Swept does **not** publish a documented, self-serve public or partner developer API. This entry is an intentional stub. No API definitions, OpenAPI specs, rate limits, or FinOps files are asserted, because none are publicly documented.
+Everything profiled for Swept is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/swept/](https://apis.io/providers/swept/)** — or go straight to one of the APIs or properties below.
 
-What the research confirmed:
+### Published properties
 
-- **No developer portal, no API reference, no API key or OAuth signup, no published OpenAPI/Swagger specification, and no webhook documentation** on sweptworks.com or in the [Swept Support Center](https://knowledge.sweptworks.com/knowledge/resources) knowledge base (Getting Started, Scheduling, Time Tracking, Inspections, Supplies, Clients, Mobile App, Operations).
-- The only documented outbound data path is a **one-way QuickBooks Online payroll sync** - manually activated per account by a Swept Customer Success Manager, syncing approved payroll entries from Swept into QuickBooks. Changes made in QuickBooks do not sync back. This is an internal, account-by-account integration, not a self-serve developer API. See [How do I sync my account with QuickBooks?](https://knowledge.sweptworks.com/knowledge/how-do-i-sync-my-account-with-quickbooks)
-- Swept does not integrate directly with payroll providers beyond QuickBooks; instead it offers CSV/PDF export of time data for use with any payroll system.
-- The [Swept GitHub organization](https://github.com/sweptworks) contains only **take-home coding-challenge repositories** used for engineering hiring (`react-flask-takehome`, `poker-takehome`, `python-react-takehome`) plus two unrelated forks (`nameko-examples`, `alpine-android`). There is **no first-party Swept API client, SDK, or OpenAPI specification** published anywhere.
-- Swept's public "App Store" page lists product features and mobile apps, not third-party integrations or a marketplace of API-connected apps.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-If you need to move data into or out of Swept today, the practical paths are: (1) use the web app and iOS/Android mobile apps directly, (2) export payroll data as CSV/PDF for any payroll system, (3) ask a Customer Success Manager to activate the one-way QuickBooks Online sync, or (4) contact Swept directly ([contact@sweptworks.com](mailto:contact@sweptworks.com)) about a custom data integration.
+#### Security (1)
 
-## Logical Product Areas (not documented APIs)
+Authentication, trust centre, and vulnerability disclosure.
 
-For reference only - these are the functional areas a Swept API *would* cover if one were published. **No endpoints are documented or modeled here** (`endpointsModeled: none`):
+- [Swept Domain Security](https://apis.io/security/swept/swept-domain-security/)
 
-- **Employees / Crew** - cleaner profiles, roles, permissions
-- **Locations / Sites** - client sites, geofences, service schedules
-- **Time Tracking** - GPS clock in/out, mobile and IVR call-in, break compliance
-- **Scheduling** - shift assignment, one-time work orders
-- **Inspections** - quality checks with photo and note capture
-- **Supplies** - supply requests and fulfillment
-- **Clients** - client portal, direct client messaging
-- **Payroll** - payroll reporting and export, one-way QuickBooks Online sync
+#### Plans and pricing (1)
 
-## Tags
+Published plans, tiers and prices.
 
-- Janitorial
-- Commercial Cleaning
-- Workforce Management
-- Scheduling
-- Time Tracking
-- Payroll
-- Inspections
-- Field Service
-- No Public API
+- [Swept Plans Pricing](https://apis.io/plans/swept/swept-plans-pricing/)
 
-## Timestamps
+## Where to find this API
 
-- **Created:** 2026-07-04
-- **Modified:** 2026-07-04
-
-## Pricing
-
-Swept publishes three cumulative tiers priced by **number of managed locations**, not per employee, starting at a 1-15 location band: **Launch** (starting at $30/month - scheduling, time tracking, payroll export, no-show alerts), **Optimize** (starting at $150/month - adds break compliance, geofenced messaging, inspections), and **Scale** (starting at $225/month - adds travel time, profitability reporting, supply management, client portal, one-time work orders). Annual billing saves up to 20%. There is no separate API/developer pricing tier because there is no public API. See [Compare Plans](https://sweptworks.com/compare-plans) and [plans/swept-plans-pricing.yml](plans/swept-plans-pricing.yml).
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://sweptworks.com)
-- [LinkedIn](https://www.linkedin.com/company/swept)
-- [GitHub Organization](https://github.com/sweptworks)
-- [Documentation (Support Center)](https://knowledge.sweptworks.com/knowledge/resources)
-- [Plans](plans/swept-plans-pricing.yml)
+- [Documentation](https://knowledge.sweptworks.com/knowledge/resources)
+- [Blog](https://learn.sweptworks.com/rss.xml)
+- [GitHub](https://github.com/sweptworks)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 7.2** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 7.9 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Employment & Payroll
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/swept/](https://apis.io/providers/swept/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Swept: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/swept/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
